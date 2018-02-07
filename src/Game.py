@@ -6,7 +6,8 @@ class Game:
 
     def get_score(self):
         for hit_score in self.game_string:
-            self.total_score += int(hit_score)
+            if hit_score != '-':
+                self.total_score += int(hit_score)
 
         return self.total_score
     
